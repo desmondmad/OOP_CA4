@@ -21,7 +21,7 @@ public class CourseChoicesManager {
     private CourseManager courseManager;
 
     // Store all the Course details -  fast access
-
+    
     // caoNumber, course selection list - for fast access
 
 

@@ -12,7 +12,12 @@ public class Course {
     // into a new Course object. Returns the new cloned object.
     // (add here)
 
-
+    public Course(Course copy){
+        this.courseId = copy.courseId;
+        this.level = copy.level;
+        this.title = copy.title;
+        this.institution = copy.institution;
+    }
 
     // Constructor
     public Course(String courseId, String level,String title, String institution) {
@@ -21,8 +26,6 @@ public class Course {
         this.title = title;
         this.institution = institution;
     }
-
-
 
     public String getCourseId() {
         return courseId;

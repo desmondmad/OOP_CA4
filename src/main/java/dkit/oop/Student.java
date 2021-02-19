@@ -11,6 +11,12 @@ public class Student {
     // a new Student object, and returns that new object (a clone)
     // (add here)
 
+    public Student(Student copy){
+        this.caoNumber = copy.caoNumber;
+        this.dateOfBirth = copy.dateOfBirth;
+        this.password = copy.password;
+        this.email = copy.email;
+    }
 
     // Constructor
     public Student(int caoNumber, String dateOfBirth, String password, String email) {
