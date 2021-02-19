@@ -22,6 +22,8 @@ public class CourseManager {
     public CourseManager() {
         courseMap = new HashMap<>();
         // Hardcode some values to get started
+        courseMap.put("DK821",new Course("DK821","8","BSc in Computing in Software Development","Dundalk Institute of Technology"));
+        courseMap.put("DK740",new Course("DK740","7","BSc in Art","Dundalk Institute of Technology"));
         // load from text file "courses.dat" and populate coursesMap
     }
 
@@ -47,7 +49,11 @@ public class CourseManager {
     }
 
     public void removeCourse(String courseId){
-        courseMap.remove(courseId);
+        if(getCourse(courseId) == null){
+            System.out.println("No Course with that courseId");
+        } else {
+            courseMap.remove(courseId);
+        }
     }
 
     // editCourse(courseId);       // not required for this iteration

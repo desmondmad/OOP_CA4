@@ -34,7 +34,9 @@ public class App
 
         // display a menu to do things
         // manual testing of mgr public interface
-
+        System.out.println(mgr.getCourseDetails("DK821"));
+        System.out.println(mgr.getCourseDetails("DK740"));
+        System.out.println(mgr.getAllCourses());
 //        if ( mgr.login(22224444, "xxxx","bbbb") )
 //        {
 //            Student student = mgr.getStudentDetails(22224444);

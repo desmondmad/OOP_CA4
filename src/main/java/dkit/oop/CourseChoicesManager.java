@@ -21,7 +21,9 @@ public class CourseChoicesManager {
     private CourseManager courseManager;
 
     // Store all the Course details -  fast access
-    
+    private Map<String, Course> courseMap;
+    private Map<Integer,List<Course>> sChoiceMaps;
+
     // caoNumber, course selection list - for fast access
 
 
@@ -34,23 +36,31 @@ public class CourseChoicesManager {
     CourseChoicesManager(StudentManager studentManager, CourseManager courseManager) {
         this.studentManager = studentManager;
         this.courseManager = courseManager;
-
+        courseMap = new HashMap<>();
+        courseManager.getAllCourses();
+        sChoiceMaps = new HashMap<>();
+        ArrayList<Course> choiceList = new ArrayList<>();
     }
 
-//    public Student getStudentDetails() {
+    public Student getStudentDetails(Integer caoNumber) {
+        Student s = studentManager.getStudent(caoNumber);
+        return s;
+    }
+//
+    public Course getCourseDetails(String courseId) {
+        Course c = courseManager.getCourse(courseId);
+        return c;
+    }
+//
+//    public Student getStudentChoices(Integer caoNumber) {
 //    }
 //
-//    public getCourseDetails() {
+//    public void updateChoices() {
 //    }
 //
-//    public  getStudentChoices() {
-//    }
-//
-//    void updateChoices() {
-//    }
-//
-//    public  getAllCourses() {
-//    }
+    public List<Course> getAllCourses() {
+        return courseManager.getAllCourses();
+    }
 //
 //    boolean login() {
 //    }

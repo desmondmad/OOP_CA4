@@ -29,7 +29,11 @@ public class StudentManager {
     }
 
     public void removeStudent(Integer caoNumber){
-        studentMap.remove(caoNumber);
+        if(getStudent(caoNumber) == null){
+            System.out.println("No Student with that caoNumber");
+        } else {
+            studentMap.remove(caoNumber);
+        }
     }
 //    isRegistered( caoNumber)
 //        students.isValid()
