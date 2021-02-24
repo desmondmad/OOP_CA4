@@ -1,3 +1,4 @@
+//Desmond Madden D00154375
 package dkit.oop;
 
 // Stores all student CAO choices.
@@ -22,8 +23,7 @@ public class CourseChoicesManager {
 
     // Store all the Course details -  fast access
     private Map<String, Course> courseMap;
-    private Map<Integer,List<Course>> sChoiceMaps;
-
+    private Map<Integer,List<String>> sChoiceMaps;
     // caoNumber, course selection list - for fast access
 
 
@@ -37,9 +37,11 @@ public class CourseChoicesManager {
         this.studentManager = studentManager;
         this.courseManager = courseManager;
         courseMap = new HashMap<>();
-        courseManager.getAllCourses();
         sChoiceMaps = new HashMap<>();
-        ArrayList<Course> choiceList = new ArrayList<>();
+        ArrayList<String> listChoice = new ArrayList<>();
+        listChoice.add("DK821");
+        listChoice.add("DK740");
+        sChoiceMaps.put(22224444,listChoice);
     }
 
     public Student getStudentDetails(Integer caoNumber) {
@@ -52,11 +54,13 @@ public class CourseChoicesManager {
         return c;
     }
 //
-//    public Student getStudentChoices(Integer caoNumber) {
-//    }
+    public List<String> getStudentChoices(Integer caoNumber) {
+        return sChoiceMaps.get(caoNumber);
+    }
 //
-//    public void updateChoices() {
-//    }
+    public void updateChoices(int caoNumber, List<String> choiceList) {
+        sChoiceMaps.put(caoNumber,choiceList);
+    }
 //
     public List<Course> getAllCourses() {
         return courseManager.getAllCourses();

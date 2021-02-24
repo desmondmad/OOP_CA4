@@ -1,3 +1,4 @@
+//Desmond Madden D00154375
 package dkit.oop;
 
 public class Course {
@@ -7,17 +8,7 @@ public class Course {
     private String title;      // e.g. BSc in Computing in Software Development
     private String institution; // Dundalk Institute of Technology
 
-    // Copy Constructor
-    // Accepts a Course object as an argument and copies all the field values
-    // into a new Course object. Returns the new cloned object.
-    // (add here)
 
-    public Course(Course copy){
-        this.courseId = copy.courseId;
-        this.level = copy.level;
-        this.title = copy.title;
-        this.institution = copy.institution;
-    }
 
     // Constructor
     public Course(String courseId, String level,String title, String institution) {
@@ -25,6 +16,20 @@ public class Course {
         this.level = level;
         this.title = title;
         this.institution = institution;
+    }
+
+    // Copy Constructor
+    // Accepts a Course object as an argument and copies all the field values
+    // into a new Course object. Returns the new cloned object.
+    // (add here)
+
+    public Course(Course copy){
+//        this.courseId = copy.courseId;
+//        this.level = copy.level;
+//        this.title = copy.title;
+//        this.institution = copy.institution;
+        this(copy.getCourseId(),copy.getLevel(),copy.getTitle(),copy.getInstitution());
+
     }
 
     public String getCourseId() {

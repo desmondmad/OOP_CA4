@@ -1,3 +1,4 @@
+//Desmond Madden D00154375
 package dkit.oop;
 
 public class Student {
@@ -6,17 +7,7 @@ public class Student {
     private String password;    // min 8 characters
     private String email;
 
-    // Copy Constructor
-    // Copies the contents of a Student object argument into
-    // a new Student object, and returns that new object (a clone)
-    // (add here)
 
-    public Student(Student copy){
-        this.caoNumber = copy.caoNumber;
-        this.dateOfBirth = copy.dateOfBirth;
-        this.password = copy.password;
-        this.email = copy.email;
-    }
 
     // Constructor
     public Student(int caoNumber, String dateOfBirth, String password, String email) {
@@ -24,6 +15,19 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
         this.password = password;
         this.email = email;
+    }
+
+    // Copy Constructor
+    // Copies the contents of a Student object argument into
+    // a new Student object, and returns that new object (a clone)
+    // (add here)
+
+    public Student(Student copy){
+//        this.caoNumber = copy.caoNumber;
+//        this.dateOfBirth = copy.dateOfBirth;
+//        this.password = copy.password;
+//        this.email = copy.email;
+        this(copy.getCaoNumber(),copy.getDayOfBirth(),copy.getPassword(),copy.getEmail());
     }
 
     //public boolean verifyLoginCredentials( yyy-mm-dd, password);

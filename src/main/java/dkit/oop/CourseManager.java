@@ -1,6 +1,9 @@
+//Desmond Madden D00154375
 package dkit.oop;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
@@ -18,12 +21,13 @@ public class CourseManager {
     // Store all the Course details.
     // Requires fast access given courseId.
     private Map<String, Course> courseMap = new HashMap<>();
-
+    File inputFile = new File("courses.txt");
     public CourseManager() {
         courseMap = new HashMap<>();
         // Hardcode some values to get started
-        courseMap.put("DK821",new Course("DK821","8","BSc in Computing in Software Development","Dundalk Institute of Technology"));
-        courseMap.put("DK740",new Course("DK740","7","BSc in Art","Dundalk Institute of Technology"));
+//        courseMap.put("DK821",new Course("DK821","8","BSc in Computing in Software Development","Dundalk Institute of Technology"));
+//        courseMap.put("DK740",new Course("DK740","7","BSc in Art","Dundalk Institute of Technology"));
+//        courseMap.put("DT250",new Course("TUD250","8","BSc in History","Technology Institute of Dublin"));
         // load from text file "courses.dat" and populate coursesMap
     }
 
@@ -52,10 +56,36 @@ public class CourseManager {
         if(getCourse(courseId) == null){
             System.out.println("No Course with that courseId");
         } else {
-            courseMap.remove(courseId);
+            this.courseMap.remove(courseId);
         }
     }
 
+    public void loadCoursesFromFile() {
+        System.out.println("Reading course DB from file...");
+
+        try {
+            Scanner sc = new Scanner(inputFile);
+
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                String [] data = line.split(",");
+                String courseId = data[0];
+                String level = data[1];
+                String title = data[2];
+                String institution = data[3];
+                courseMap.put(courseId,new Course(courseId,level,title,institution));
+            }
+            System.out.println("All courses loaded");
+            sc.close();
+
+        } catch ( FileNotFoundException exception)
+        {
+            System.out.println("FileNotFoundException caught." + exception);
+        } catch (InputMismatchException exception)
+        {
+            System.out.println("InputMismatchexception caught." + exception);
+        }
+    }
     // editCourse(courseId);       // not required for this iteration
 
 }
