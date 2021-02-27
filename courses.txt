@@ -1,18 +1,19 @@
-DK821,8,BSc in Computing in Software Development,Dundalk Institute of Technology
+DN271,8,BSc in Forestry,University College Dublin
+DT001,8,BSc in Product Design,Dublin Institute of Technology
+CR053,7,BSc in Interior Architecture, Cork Institute of Technology
+XT100,8,BSc in Testing Test,Somewhere
+DC110,8,BSc in Business Studies International,Dublin City University
+GY251,8,BSc in Law,National University of Ireland - Galway
 DK820,8,BSc in Computing in Games Development,Dundalk Institute of Technology
 DK721,8,BSc in Computing,Dundalk Institute of Technology
-AL860,8,BSc in Social Care Practice,Athlone Institute of Technology
-AL763,7,BSc in Graphic Design,Athlone Institute of Technology
-CW808,8,BSc in Media and Public Relations,Institute of Technology Carlow
-CW507,7,BSc in Aircraft Systems,Institute of Technology Carlow
-CR105,8,BSc in Chemical and Biopharmaceutical Engineering,Cork Institute of Technology
-CR053,7,BSc in Interior Architecture, Cork Institute of Technology
-CK102,8,BSc in Social Science,University College Cork
-DC110,8,BSc in Business Studies International,Dublin City University
-DT001,8,BSc in Product Design,Dublin Institute of Technology
 DT219,7,BSc in Ophthalmic Dispensing,Dublin Institute of Technology
+AL860,8,BSc in Social Care Practice,Athlone Institute of Technology
+CW507,7,BSc in Aircraft Systems,Institute of Technology Carlow
+DK821,8,BSc in Computing in Software Development,Dundalk Institute of Technology
+CR105,8,BSc in Chemical and Biopharmaceutical Engineering,Cork Institute of Technology
 TR002,8,BSc in Music,Trinity College Dublin
-DN271,8,BSc in Forestry,University College Dublin
 GA284,8,BSc in Design,Galway-Mayo Institute of Technology
+CW808,8,BSc in Media and Public Relations,Institute of Technology Carlow
+CK102,8,BSc in Social Science,University College Cork
+AL763,7,BSc in Graphic Design,Athlone Institute of Technology
 GA673,7,BSc in Energy Engineering,Galway-Mayo Institute of Technology
-GY251,8,BSc in Law,National University of Ireland - Galway

@@ -29,7 +29,6 @@ public class Course {
 //        this.title = copy.title;
 //        this.institution = copy.institution;
         this(copy.getCourseId(),copy.getLevel(),copy.getTitle(),copy.getInstitution());
-
     }
 
     public String getCourseId() {
@@ -58,6 +57,7 @@ public class Course {
         return "Course{" +
                 "courseId='" + courseId + '\'' +
                 ", level='" + level + '\'' +
+                ", title='" + title + '\'' +
                 ", institution='" + institution + '\'' +
                 '}';
     }

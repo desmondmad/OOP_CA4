@@ -4,8 +4,8 @@ package dkit.oop;
 // to manipulate student objects
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.awt.*;
+import java.io.*;
 import java.util.*;
 
 public class StudentManager {
@@ -70,6 +70,9 @@ public class StudentManager {
                 studentMap.put(caoNumber,new Student(caoNumber,dateOfBirth,password,email));
             }
             System.out.println("All students loaded");
+            System.out.println(
+
+            );
             sc.close();
 
         } catch ( FileNotFoundException exception)
@@ -78,6 +81,20 @@ public class StudentManager {
         } catch (InputMismatchException exception)
         {
             System.out.println("InputMismatchexception caught." + exception);
+        }
+    }
+
+    public void saveStudentsToFile(){
+        try (BufferedWriter studentsFile = new BufferedWriter(new FileWriter("students.txt")))
+        {
+            Set<Integer> keySet = studentMap.keySet();
+            for(Integer key : keySet) {
+                studentsFile.write(studentMap.get(key).getCaoNumber()+","+studentMap.get(key).getDayOfBirth()+","+studentMap.get(key).getPassword()+","+studentMap.get(key).getEmail());
+                studentsFile.write("\n");
+            }
+        }
+        catch(IOException ioe){
+            System.out.println(Color.pink + "COULD NOT SAVE STUDENTS" + Color.pink);
         }
     }
 

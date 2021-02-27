@@ -2,9 +2,10 @@
 package dkit.oop;
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.awt.*;
+import java.io.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * CoursesManager
@@ -25,9 +26,6 @@ public class CourseManager {
     public CourseManager() {
         courseMap = new HashMap<>();
         // Hardcode some values to get started
-//        courseMap.put("DK821",new Course("DK821","8","BSc in Computing in Software Development","Dundalk Institute of Technology"));
-//        courseMap.put("DK740",new Course("DK740","7","BSc in Art","Dundalk Institute of Technology"));
-//        courseMap.put("DT250",new Course("TUD250","8","BSc in History","Technology Institute of Dublin"));
         // load from text file "courses.dat" and populate coursesMap
     }
 
@@ -73,9 +71,10 @@ public class CourseManager {
                 String level = data[1];
                 String title = data[2];
                 String institution = data[3];
-                courseMap.put(courseId,new Course(courseId,level,title,institution));
+                courseMap.put(courseId, new Course(courseId,level,title,institution));
             }
             System.out.println("All courses loaded");
+            System.out.println();
             sc.close();
 
         } catch ( FileNotFoundException exception)
@@ -84,6 +83,20 @@ public class CourseManager {
         } catch (InputMismatchException exception)
         {
             System.out.println("InputMismatchexception caught." + exception);
+        }
+    }
+
+    public void saveCoursesToFile(){
+        try (BufferedWriter courseFile = new BufferedWriter(new FileWriter("courses.txt")))
+        {
+            Set<String> keySet = courseMap.keySet();
+            for(String key : keySet) {
+                courseFile.write(courseMap.get(key).getCourseId()+","+courseMap.get(key).getLevel()+","+courseMap.get(key).getTitle()+","+courseMap.get(key).getInstitution());
+                courseFile.write("\n");
+            }
+        }
+        catch(IOException ioe){
+            System.out.println(Color.pink + "COULD NOT SAVE COURSES" + Color.pink);
         }
     }
     // editCourse(courseId);       // not required for this iteration
