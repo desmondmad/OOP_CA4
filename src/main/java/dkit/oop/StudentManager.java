@@ -18,9 +18,6 @@ public class StudentManager {
         // Hardcode some values to get started
         // later, load from text file "students.dat" and populate studentsMap
         studentMap = new HashMap<>();
-//        studentMap.put(22224444,new Student(22224444,"1995-04-25","5720192Dm1","d00154375@dkit.student.ie"));
-//        studentMap.put(90909090,new Student(90909090,"1996-06-26","e3uyszr1","d00133445@dkit.student.ie"));
-//        studentMap.put(12345678,new Student(12345678,"2000-10-10","password","d00173746@dkit.student.ie"));
     }
 
     public void addStudent(Student student){

@@ -1,4 +1,10 @@
 12345678,2000-10-10,password,d00173746@dkit.student.ie
-87654321,2000-09-27,bobsagat@gmail.com,bobsagat10
+87654321,2000-09-27,bobsagat10,bobsagat@gmail.com
 90909090,1996-06-26,e3uyszr1,d00133445@dkit.student.ie
 22224444,1995-04-25,5720192Dm1,d00154375@dkit.student.ie
+19283746,2000-06-06,password1,test1@gmail.com
+28374650,1999-01-01,dhjkssdjkf3,test2@gmail.com
+37465102,2001-02-09,this15Apswd,test3@gmail.com
+46510293,2000-04-29,th1s215aWrd,test4@gmail.com
+56473829,1999-12-31,1amrunn1ng,0u70f@gmail.com
+12983475,1998-01-21,1d3a5n0w,google@gmail.com

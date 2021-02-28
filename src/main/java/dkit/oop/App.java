@@ -228,7 +228,7 @@ public class App
                         System.out.println("Please enter your password");
                         password = keyboard.next();
                     }
-                    s.addStudent(new Student(caoNumber,dob,email,password));
+                    s.addStudent(new Student(caoNumber,dob,password,email));
                     break;
                 case 6:
                     System.out.println("Please enter a student caoNumber to remove: ");
@@ -261,7 +261,7 @@ public class App
     }
 
     public static boolean validatePassword(String password){
-        String regex = "[a-zA-Z0-9]{10}";
+        String regex = "[a-zA-Z0-9]{8}.*";
         if (password == null){
             return false;
         } else if (password.matches("admin")){
